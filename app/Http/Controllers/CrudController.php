@@ -40,15 +40,10 @@ class CrudController extends Controller
         
     }
 
-
-    public function logout(){
+    public function logout(){// to end session
         Session::flush();
         Auth::logout();
   
         return Redirect('/');
-    }
-
-
-
-    
+    }    
 }

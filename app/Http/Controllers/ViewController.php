@@ -15,6 +15,7 @@ class ViewController extends Controller
         return view('login');
         
     }
+
     public function addproduct(Request $request, $id)
     {
         $user =Auth::guard('signup')->user();
@@ -23,6 +24,7 @@ class ViewController extends Controller
         $products=product::where('id',$id)->get();
         return view('addproduct', compact('data', 'products','userId'));
     }
+
     public function home()
     {
         $products = Product::inRandomOrder()->limit(6)->get(); // Retrieve 6 random products
@@ -31,7 +33,6 @@ class ViewController extends Controller
         return view('home', compact('data', 'products'));
     }
     
-
     public function contactus()
     {
         $data = category::all();
