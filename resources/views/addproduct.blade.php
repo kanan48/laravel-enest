@@ -1,17 +1,17 @@
 @extends('layouts.main')
 
 @push('title')
-AddProduct
+    AddProduct
 @endpush
 
 @section('addproduct');
 <div class="main-categorious">
     @if(session('Success'))
-    {{session('Success')}}
+        {{session('Success')}}
     @elseif(session('errorr'))
-    {{session('errorr')}}
+        {{session('errorr')}}
     @else
-    {{session('error')}}
+        {{session('error')}}
     @endif
     <div class="footer">
         @include('layouts.leftlist')
