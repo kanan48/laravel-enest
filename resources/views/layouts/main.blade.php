@@ -1,4 +1,4 @@
-@include('layouts.header')
+@include('layouts.header'){{--including header--}}
 
     @yield('buynow')
     @yield('addproduct')
@@ -7,4 +7,4 @@
     @yield('login')
     @yield('home')
 
-@include('layouts.footer')
+@include('layouts.footer'){{--including footer--}}

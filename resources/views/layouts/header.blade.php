@@ -17,15 +17,15 @@
 					</div>
 					<div class="btn">
 						@if (!Auth::guard('signup')->check())
-								<!-- Show the "Login First" button when the user is not authenticated -->
-								<a href="{{ url('/') }}">
-									<input type="button" name="login" value="Log In">
-								</a>
-							@else
+							{{-- Show the "Login First" button when the user is not authenticated --}}
+							<a href="{{ url('/') }}">
+								<input type="button" name="login" value="Log In">
+							</a>
+						@else
 							<a href="{{ route('logout') }}">
 								<input type="button" name="logout" value="Log Out :{{Auth::guard('signup')->user()->fullname}}">
 							</a>
-							@endif
+						@endif
 					</div>
 				</div>
 			</div>
